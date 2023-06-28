@@ -1,0 +1,185 @@
+# "airodump-ng WiFi 5 Station Enumerator"
+# Twitter r3sh1ram
+# Github geket
+
+# https://en.wikipedia.org/wiki/Unlicensed_National_Information_Infrastructure
+# https://en.wikipedia.org/wiki/List_of_WLAN_channels
+
+# Some WiFi channels will not work based on your regional settings or your interface capabilities.
+# Make sure you are on your local regulatory set:
+iw reg get
+
+# Change the regulatory body to the US standard.
+# Find your local domain here 'https://kernel.googlesource.com/pub/scm/linux/kernel/git/linville/wireless-regdb/+/af726449e73286e1375e7a72336045d9d0ce84f8/db.txt'
+iw reg set US 
+
+# Ensure that the regulatory has changed succesfully
+iw reg get
+
+# Paste all lines at once into bash terminal
+sudo bash
+
+# Create the dependency folders:
+# Ctrl + H replace "/root/cap/pa/th/" with your path.
+sudo mkdir /root/cap/pa/th/c1
+sudo mkdir /root/cap/pa/th/c2
+sudo mkdir /root/cap/pa/th/c3
+sudo mkdir /root/cap/pa/th/c4
+sudo mkdir /root/cap/pa/th/c5
+sudo mkdir /root/cap/pa/th/c6
+sudo mkdir /root/cap/pa/th/c7
+sudo mkdir /root/cap/pa/th/c8
+sudo mkdir /root/cap/pa/th/c9
+sudo mkdir /root/cap/pa/th/c10
+sudo mkdir /root/cap/pa/th/c11
+sudo mkdir /root/cap/pa/th/c12
+sudo mkdir /root/cap/pa/th/c13
+sudo mkdir /root/cap/pa/th/c14
+sudo mkdir /root/cap/pa/th/c36
+sudo mkdir /root/cap/pa/th/c38
+sudo mkdir /root/cap/pa/th/c40
+sudo mkdir /root/cap/pa/th/c42
+sudo mkdir /root/cap/pa/th/c44 
+sudo mkdir /root/cap/pa/th/c46
+sudo mkdir /root/cap/pa/th/c48
+sudo mkdir /root/cap/pa/th/c50
+sudo mkdir /root/cap/pa/th/c52
+sudo mkdir /root/cap/pa/th/c64
+sudo mkdir /root/cap/pa/th/c132
+sudo mkdir /root/cap/pa/th/c134
+sudo mkdir /root/cap/pa/th/c136
+sudo mkdir /root/cap/pa/th/c138
+sudo mkdir /root/cap/pa/th/c140
+sudo mkdir /root/cap/pa/th/c142
+sudo mkdir /root/cap/pa/th/c144
+sudo mkdir /root/cap/pa/th/c153
+sudo mkdir /root/cap/pa/th/c155
+sudo mkdir /root/cap/pa/th/c157
+sudo mkdir /root/cap/pa/th/c159
+sudo mkdir /root/cap/pa/th/c161
+sudo mkdir /root/cap/pa/th/c165
+sudo mkdir /root/cap/pa/th/c169
+sudo mkdir /root/cap/pa/th/c173
+
+# Check the WiFi interface (usually wlp or wlan)
+ip a
+# Enable monitor mode, you will lose internet connectivity if you do not have another interface providing it:
+airmon-ng check kill
+airmon-ng start <interface>
+# Ctrl + H replace <interface> with your new monitor WiFi interface ((wlp*s*mon or wlan*mon):
+
+# Enumerating
+# Seperate terminals:
+cd /root/cap/pa/th/c1/
+sudo airodump-ng --channel 1 -w YYMMDD-HHSS --output-format csv <interface>
+
+cd /root/cap/pa/th/c2/
+sudo airodump-ng --channel 2 -w YYMMDD-HHSS --output-format csv <interface>
+
+cd /root/cap/pa/th/c3/
+sudo airodump-ng --channel 3 -w YYMMDD-HHSS --output-format csv <interface>
+
+cd /root/cap/pa/th/c4/
+sudo airodump-ng --channel 4 -w YYMMDD-HHSS --output-format csv <interface>
+
+cd /root/cap/pa/th/c5/
+sudo airodump-ng --channel 5 -w YYMMDD-HHSS --output-format csv <interface>
+
+cd /root/cap/pa/th/c6/
+sudo airodump-ng --channel 6 -w YYMMDD-HHSS --output-format csv <interface>
+
+cd /root/cap/pa/th/c7/
+sudo airodump-ng --channel 7 -w YYMMDD-HHSS --output-format csv <interface>
+
+cd /root/cap/pa/th/c8/
+sudo airodump-ng --channel 8 -w YYMMDD-HHSS --output-format csv <interface>
+
+cd /root/cap/pa/th/c9/
+sudo airodump-ng --channel 9 -w YYMMDD-HHSS --output-format csv <interface>
+
+cd /root/cap/pa/th/c10/
+sudo airodump-ng --channel 10 -w YYMMDD-HHSS --output-format csv <interface>
+
+cd /root/cap/pa/th/c11/
+sudo airodump-ng --channel 11 -w YYMMDD-HHSS --output-format csv <interface>
+
+cd /root/cap/pa/th/c12/
+sudo airodump-ng --channel 12 -w YYMMDD-HHSS --output-format csv <interface>
+
+cd /root/cap/pa/th/c13/
+sudo airodump-ng --channel 13 -w YYMMDD-HHSS --output-format csv <interface>
+
+cd /root/cap/pa/th/c14/
+sudo airodump-ng --channel 14 -w YYMMDD-HHSS --output-format csv <interface>
+
+cd /root/cap/pa/th/c36/
+sudo airodump-ng --channel 36 -w YYMMDD-HHSS --output-format csv <interface>
+
+cd /root/cap/pa/th/c38/
+sudo airodump-ng --channel 38 -w YYMMDD-HHSS --output-format csv <interface>
+
+cd /root/cap/pa/th/c40/
+sudo airodump-ng --channel 40 -w YYMMDD-HHSS --output-format csv <interface>
+
+cd /root/cap/pa/th/c42/
+sudo airodump-ng --channel 42 -w YYMMDD-HHSS --output-format csv <interface>
+
+cd /root/cap/pa/th/c44/
+sudo airodump-ng --channel 44 -w YYMMDD-HHSS --output-format csv <interface>
+
+cd /root/cap/pa/th/c46/
+sudo airodump-ng --channel 46 -w YYMMDD-HHSS --output-format csv <interface>
+
+cd /root/cap/pa/th/c48/
+sudo airodump-ng --channel 48 -w YYMMDD-HHSS --output-format csv <interface>
+
+cd /root/cap/pa/th/c50/
+sudo airodump-ng --channel 50 -w YYMMDD-HHSS --output-format csv <interface>
+
+cd /root/cap/pa/th/c52/
+sudo airodump-ng --channel 52 -w YYMMDD-HHSS --output-format csv <interface>
+
+cd /root/cap/pa/th/c64/
+sudo airodump-ng --channel 64 -w YYMMDD-HHSS --output-format csv <interface>
+
+cd /root/cap/pa/th/c132/
+sudo airodump-ng --channel 132 -w YYMMDD-HHSS --output-format csv <interface>
+
+cd /root/cap/pa/th/c134/
+sudo airodump-ng --channel 134 -w YYMMDD-HHSS --output-format csv <interface>
+
+cd /root/cap/pa/th/c136/
+sudo airodump-ng --channel 136 -w YYMMDD-HHSS --output-format csv <interface>
+
+cd /root/cap/pa/th/c138/
+sudo airodump-ng --channel 138 -w YYMMDD-HHSS --output-format csv <interface>
+
+cd /root/cap/pa/th/c140/
+sudo airodump-ng --channel 140 -w YYMMDD-HHSS --output-format csv <interface>
+
+cd /root/cap/pa/th/c142/
+sudo airodump-ng --channel 142 -w YYMMDD-HHSS --output-format csv <interface>
+
+cd /root/cap/pa/th/c144/
+sudo airodump-ng --channel 144 -w YYMMDD-HHSS --output-format csv <interface>
+
+cd /root/cap/pa/th/c153/
+sudo airodump-ng --channel 153 -w YYMMDD-HHSS --output-format csv <interface>
+
+cd /root/cap/pa/th/c155/
+sudo airodump-ng --channel 155 -w YYMMDD-HHSS --output-format csv <interface>
+
+cd /root/cap/pa/th/c159/
+sudo airodump-ng --channel 159 -w YYMMDD-HHSS --output-format csv <interface>
+
+cd /root/cap/pa/th/c161/
+sudo airodump-ng --channel 161 -w YYMMDD-HHSS --output-format csv <interface>
+
+cd /root/cap/pa/th/c165/
+sudo airodump-ng --channel 165 -w YYMMDD-HHSS --output-format csv <interface>
+
+cd /root/cap/pa/th/c169/
+sudo airodump-ng --channel 169 -w YYMMDD-HHSS --output-format csv <interface>
+
+cd /root/cap/pa/th/c173/
+sudo airodump-ng --channel 173 -w YYMMDD-HHSS --output-format csv <interface>
